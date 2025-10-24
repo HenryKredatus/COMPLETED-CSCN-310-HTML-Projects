@@ -1,0 +1,130 @@
+/* Asgn03 Styles */
+
+body {
+    color: black;
+    background-color: white;
+    background-image:url("../images/lotus01.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#container {
+    position: relative;
+    z-index: 10;
+    margin: 20px auto 20px auto;
+    width: 1040px; /* default without padding is 1040px */
+    height: auto;
+    /* padding: 15px;
+    border: 1px solid #111; */
+
+    /* CSS Grid */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 200px);
+    grid-auto-rows: 200px 
+                     75px 
+                   auto 
+                    150px;
+    grid-template-areas: 
+        "a b b b b"
+        "c c c c c"
+        "d d d d d"
+        "e e e e e";
+}
+
+#a, #b, #c, #d, #e {
+    z-index: 15;
+    border: 1px solid #111;
+    background-color: #CFD1D3;
+}
+
+#a {
+    grid-area: a;
+
+    img {
+        z-index: 20;
+        height: 100%;
+    }
+}
+
+#b {
+    grid-area: b;
+
+    h1 {
+        z-index: 20;
+        font-size: 4em;
+        letter-spacing: 10px;
+    }
+}
+
+#c {
+    grid-area: c;
+
+    a:link {
+        z-index: 20;
+        font-size: 1.5em;
+        padding: 20px;
+    }
+}
+
+#d {
+    grid-area: d;
+    padding: 20px;
+
+    .img01 {
+        z-index: 20;
+        width: 40%;
+        float: left;
+        margin-left: 15px;
+        border: 2px solid #111;
+    }
+
+        .img02 {
+        z-index: 20;
+        width: 40%;
+        float: right;
+        margin-right: 15px;
+        border: 2px solid #111;
+    }
+
+    p {
+        z-index: 20;
+        font-size: 1.25em;
+        text-align: justify;
+        text-indent: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+#e {
+    grid-area: e;
+}
+
+
+/* Classes */
+
+.rmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Colors:
+#C69428
+#2F3740
+#CFD1D3
+#ADA19A
+#716355
+#F3D073
+#65410C
+#926219
+#51789E
+#39A8C7 */
