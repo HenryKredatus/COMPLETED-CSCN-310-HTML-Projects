@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reservations — Hammerson Mountain Resort</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="images/logo.png" alt="Hammerson Mountain Resort logo" class="logo"></a>
+      <div class="brand-text">
+        <h1>Hammerson Mountain Resort</h1>
+        <p class="tag">34 Mountain Road, Hanna, WY • 1-888-445-2343</p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <input type="search" id="site-search" placeholder="Search the site..." aria-label="Search">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resort.html">Resort</a>
+      <a href="activities.html">Activities</a>
+      <a href="events.html">Events</a>
+      <a href="reservations.html" class="btn-reserve">Reservations</a>
+    </nav>
+  </header>
+  <main>
+
+<section class="wrap content">
+  <h2>Reservations</h2>
+  <p>Secure your stay and activities at Hammerson Mountain Resort. Whether you’re planning a weekend retreat, a family getaway, or an extended adventure in the Rockies, we offer comfortable accommodations and easy online booking. Fill out the form below to request a reservation — our team will confirm availability and follow up by phone or email.</p>
+
+  <div class="reservation-grid">
+    <form class="reservation-form" action="#" method="post">
+      <label for="rname">Name</label>
+      <input id="rname" name="name" type="text" required>
+
+      <label for="remail">Email</label>
+      <input id="remail" name="email" type="email" required>
+
+      <label for="rphone">Phone</label>
+      <input id="rphone" name="phone" type="tel">
+
+      <label for="rdate">Arrival Date</label>
+      <input id="rdate" name="arrival" type="date" required>
+
+      <label for="rnight">Nights</label>
+      <input id="rnight" name="nights" type="number" min="1" value="2">
+
+      <label for="rtype">Room Type</label>
+      <select id="rtype" name="room">
+        <option>Standard Room</option>
+        <option>Deluxe Suite</option>
+        <option>Family Suite</option>
+      </select>
+
+      <div class="form-row">
+        <button class="btn btn-primary" type="submit">Request Reservation</button>
+        <a href="#" class="btn btn-ghost">Contact Reservations</a>
+      </div>
+    </form>
+
+    <aside class="reservation-info">
+      <h3>Room Types</h3>
+
+      <h4>Standard Room</h4>
+      <p>Ideal for solo travelers or couples, our Standard Rooms feature a cozy queen bed, mountain-inspired décor, and a private balcony overlooking the pines.</p>
+      <img src="images/Standard Room.jpg" alt="Standard room" style="width:100%;max-width:280px;border-radius:10px;margin-top:8px;">
+
+      <h4>Deluxe Suite</h4>
+      <p>The Deluxe Suite offers extra space, a king bed, fireplace, and lounge area — perfect for romantic getaways or longer stays in comfort.</p>
+      <img src="images/resort-5.jpg" alt="Deluxe suite" style="width:100%;max-width:280px;border-radius:10px;margin-top:8px;">
+
+      <h4>Family Suite</h4>
+      <p>Spacious and well-equipped for groups, the Family Suite includes two bedrooms, a full living area, and a kitchenette for convenience and flexibility.</p>
+      <img src="images/Family Suite.jpeg" alt="Family suite" style="width:100%;max-width:280px;border-radius:10px;margin-top:8px;">
+
+      <h3>Pricing</h3>
+      <p>Sample rates (seasonal — subject to change):</p>
+      <ul>
+        <li>Standard Room — from $129 / night</li>
+        <li>Deluxe Suite — from $219 / night</li>
+        <li>Family Suite — from $289 / night</li>
+      </ul>
+
+      <h4>Policies</h4>
+      <p>Deposit and cancellation policies vary by season. Please review terms or contact reservations for details. Early booking is recommended during peak ski and holiday periods.</p>
+    </aside>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="col">
+        <h4>Contact</h4>
+        <p>34 Mountain Road, Hanna, WY 82327<br>Phone: 1-888-445-2343<br>Email: <a href="mailto:hammersen@hresort.com">hammersen@hresort.com</a></p>
+      </div>
+      <div class="col">
+        <h4>Hours</h4>
+        <p>Open daily • Seasonal hours vary. Check Events & Reservations pages for details.</p>
+      </div>
+      <div class="col">
+        <h4>Follow</h4>
+        <p>Socials coming soon — follow Hammerson Mountain Resort for updates.</p>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Hammerson Mountain Resort</div>
+  </footer>
+</body>
+</html>

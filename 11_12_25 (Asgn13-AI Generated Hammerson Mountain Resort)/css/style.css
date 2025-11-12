@@ -1,0 +1,90 @@
+
+/* Hammerson Mountain Resort - Main stylesheet */
+:root{
+  --c1:#F0F8FF; /* aliceblue */
+  --c2:#B0E0E6; /* powderblue */
+  --c3:#C0C0C0; /* silver */
+  --c4:#A9A9A9; /* darkgray */
+  --c5:#696969; /* dimgray */
+  --accent:#FF7E4A;
+  --max-width:1100px;
+  --radius:12px;
+  font-family: 'Segoe UI', Roboto, -apple-system, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--c1),white 60%);color:var(--c5);line-height:1.5}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(255,255,255,0.85);backdrop-filter:blur(4px);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--c3)}
+.brand{display:flex;align-items:center;gap:1rem}
+.logo{width:64px;height:64px;object-fit:contain;border-radius:8px}
+.brand-text h1{margin:0;font-size:1.1rem}
+.tag{margin:0;font-size:0.85rem;color:var(--c4)}
+
+.main-nav{display:flex;align-items:center;gap:1rem}
+.main-nav a{color:var(--c5);text-decoration:none;padding:0.5rem 0.75rem;border-radius:8px}
+.main-nav a:hover{background:var(--c2)}
+#site-search{padding:0.4rem 0.6rem;border-radius:20px;border:1px solid var(--c3);margin-right:0.5rem}
+
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--c5);text-decoration:none}
+.btn-primary{background:var(--accent);color:white}
+.btn:hover{transform:translateY(-2px);transition:all .18s ease}
+
+.site-footer{background:var(--c3);color:white;padding:2rem 1rem;margin-top:3rem}
+.site-footer .wrap{display:flex;gap:2rem}
+.site-footer .col{flex:1}
+
+.hero{position:relative;height:420px;overflow:hidden;border-bottom-left-radius:32px;border-bottom-right-radius:32px}
+.hero-video{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;opacity:0.45;object-fit:cover}
+.hero-overlay{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;height:100%;padding:3rem;color:var(--c5)}
+.hero-overlay h2{font-size:2rem;margin:0 0 0.5rem}
+.hero-overlay p{max-width:700px}
+
+.hero-cta{margin-top:1rem;display:flex;gap:1rem}
+
+.cards{display:flex;gap:1rem;margin-top:1rem}
+.card{background:white;padding:1rem;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.06);flex:1}
+
+.featured .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.media img{width:100%;height:170px;object-fit:cover;border-radius:8px}
+
+.gallery{display:flex;gap:1rem;flex-wrap:wrap}
+.gallery figure{flex:1;min-width:200px;background:white;padding:0.5rem;border-radius:10px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+
+.content h2{margin-top:0}
+.activities-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.activities-grid article{background:white;padding:1rem;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
+
+.reservation-grid{display:grid;grid-template-columns:2fr 1fr;gap:2rem}
+.reservation-form{background:white;padding:1rem;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
+.reservation-form label{display:block;margin-top:0.6rem;font-size:0.9rem}
+.reservation-form input,.reservation-form select{width:100%;padding:0.5rem;border-radius:8px;border:1px solid var(--c3);margin-top:0.25rem}
+
+.form-row{display:flex;gap:0.75rem;align-items:center;margin-top:1rem}
+
+.btn-reserve{background:var(--accent);color:white;padding:0.5rem 0.8rem;border-radius:8px}
+
+.events-list article{background:white;padding:1rem;border-radius:10px;margin-bottom:0.6rem;box-shadow:0 6px 16px rgba(0,0,0,0.05)}
+
+.newsletter-form{background:white;padding:1rem;border-radius:10px;display:flex;flex-direction:column;gap:0.5rem}
+.newsletter-form .form-row{display:flex}
+.newsletter-form input{flex:1}
+
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width:900px){
+  .main-nav{flex-wrap:wrap}
+  .featured .grid{grid-template-columns:1fr}
+  .activities-grid{grid-template-columns:1fr}
+  .reservation-grid{grid-template-columns:1fr}
+  .site-header{padding:0.6rem 1rem}
+  .hero{height:300px}
+}
