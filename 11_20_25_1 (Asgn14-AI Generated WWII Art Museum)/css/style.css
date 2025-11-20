@@ -1,0 +1,129 @@
+/* GLOBAL RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background: url("../images/bg-museum.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    position: relative;
+}
+
+/* DARK OVERLAY FOR LEGIBILITY */
+body::before {
+    content: "";
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: -1;
+}
+
+/* NAVIGATION BAR --------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(10, 20, 50, 0.7);
+
+    padding: 10px 0;
+    gap: 40px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-logo img {
+    height: 70px;
+}
+
+/* MAIN CONTENT ------------------------------------------------------ */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+.page-image {
+    width: 300px;
+    margin: 15px;
+    border: 3px solid white;
+}
+
+/* SLIDESHOW --------------------------------------------------------- */
+.slideshow {
+    position: relative;
+    margin: 0 auto;
+    width: 600px;       /* FIXED WIDTH */
+    height: 350px;      /* FIXED HEIGHT */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 600px;       /* FIXED WIDTH */
+    height: 350px;      /* FIXED HEIGHT */
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* GALLERY ----------------------------------------------------------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border: 2px solid white;
+}
+
+/* SEARCH BAR ------------------------------------------------------- */
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+
+    margin: 20px auto;
+
+    border-radius: 8px;
+    border: none;
+
+    font-size: 16px;
+}
+
+/* FOOTER ----------------------------------------------------------- */
+footer {
+    background: rgba(10, 20, 50, 0.8);
+
+    padding: 20px;
+    text-align: center;
+
+    margin-top: 40px;
+}

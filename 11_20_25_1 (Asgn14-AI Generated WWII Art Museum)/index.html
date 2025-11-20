@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WWII Aircraft Artist Museum – Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="museum.html">Museum</a>
+            </div>
+
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Museum Logo">
+            </div>
+
+            <div class="nav-right">
+                <a href="gallery.html">Gallery</a>
+                <a href="visitors.html">Visitors</a>
+                <a href="events.html">Events</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>WWII Aircraft Artist Museum</h1>
+        <img src="images/logo.png" alt="Museum Banner" style="width: 80%; max-width: 1000px; display: block; margin: 20px auto;">
+
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <h2>Featured Slideshow</h2>
+
+        <div class="slideshow">
+            <img src="images/Mustang.jpg" alt="Mustang" class="active">
+            <img src="images/Lancaster.jpg" alt="Lancaster Bomber">
+            <img src="images/B-17.jpg" alt="B-17 Flying Fortress">
+            <img src="images/Spitfire.jpg" alt="Spitfire">
+            <img src="images/F4U Corsair.jpg" alt="F4U Corsairs">
+            <img src="images/B-25 Mitchell.jpg" alt="B-25 Mitchell">
+            <img src="images/Yak-9.jpg" alt="Yak-9">
+            <img src="images/Mitsubishi Zero.jpg" alt="Mitsubishi A6M Zero">
+            <img src="images/P-47 Thunderbolt.jpg" alt="P-47 Thunderbolt">
+            <img src="images/C-47 Skytrain.jpg" alt="C-47 Skytrain">
+            <img src="images/SBD Dauntless.jpg" alt="SBD Dauntless">
+            <img src="images/P-38 Lightning.jpg" alt="P-38 Lightnings">
+        </div>
+
+        <script>
+            let slides = document.querySelectorAll('.slideshow img');
+            let index = 0;
+
+            function showNextSlide() {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            setInterval(showNextSlide, 3000); // 3 seconds
+        </script>
+
+        <section class="info">
+            <h2>Visitor Information</h2>
+
+            <p>
+                The WWII Aircraft Artist Museum welcomes guests to explore an inspiring collection 
+                that brings aviation history to life through artwork. The museum provides a relaxed 
+                and engaging environment where visitors can begin their journey with a broad overview 
+                of the displays, storylines, and creative works featured throughout the building. 
+                First-time guests will find clear signage, helpful staff, and easy access to maps and 
+                guides that highlight popular exhibits and must-see artwork.
+            </p>
+
+            <p>
+                The museum’s layout is designed so visitors can enjoy both quick walkthroughs and 
+                extended visits. Whether you're interested in viewing iconic paintings, learning 
+                about the artists behind them, or simply taking in the visual atmosphere, the museum 
+                offers something for every pace and interest level. Before exploring the detailed 
+                exhibitions on the museum pages, this overview provides a welcoming introduction 
+                to everything the museum has to offer.
+            </p>
+
+            <img src="images/museum exterior 2.jpg" class="page-image">
+            <img src="images/museum interior 2.jpg" class="page-image">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>223 South Avenue, Boston, VA 24555</p>
+        <p>1-888-525-2333 | ww2artist@ww2artist.org</p>
+    </footer>
+
+</body>
+</html>
