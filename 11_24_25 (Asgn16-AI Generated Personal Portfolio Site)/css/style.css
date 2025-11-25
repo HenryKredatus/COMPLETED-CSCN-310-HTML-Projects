@@ -1,0 +1,280 @@
+/* ================================
+   ORIGINAL STYLES (preserved)
+================================ */
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Page */
+body {
+    background: white;
+    color: #8b0000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Container */
+.container { max-width: 1080px; margin: 0 auto; padding: 20px; }
+
+.header-banner { display: block; margin-left: 225px; margin-right: auto; width: 60%; /* or any width you want */ }
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  width: 100%;
+}
+nav ul { list-style: none; margin: 0; padding: 0; }
+.nav-left, .nav-right { display: flex; gap: 30px; }
+.nav-left, .nav-right { flex: 1; justify-content: flex-end; }
+.nav-right { justify-content: flex-start; }
+.logo { height: 100px; width: auto; }
+
+/* Links */
+.nav-link {
+  color: #8b0000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.nav-link:hover { background: #ffe5e5; }
+
+.navbar a:hover {
+    background: rgba(255, 120, 120, 0.45);
+    color: #ffffff;
+}
+
+
+/* HERO */
+.hero { position: relative; min-height: 300px; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(139, 0, 0, 0.35); }
+.hero img { width: 100%; height: 100%; object-fit: cover; }
+.hero-content { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+
+/* Section titles */
+.section-title { color: #8b0000; font-size: 1.4rem; margin: 10px 0; }
+
+/* Grid */
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+/* Cards */
+.card { background: #fff0f0; border: 1px solid #ffd0d0; border-radius: 10px; overflow: hidden; }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-body { padding: 10px; color: #8b0000; }
+
+/* Resume Embed */
+.resume-frame { width: 100%; height: 900px; border: none; margin-top: 20px; }
+
+/* =============================== IMAGE GALLERY =============================== */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin: 40px auto; max-width: 1100px; }
+
+/* normal gallery items (single cell each) */
+.gallery-item { text-align: center; }
+
+/* images */
+.gallery-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
+
+/* titles + descriptions */
+.gallery-item h3 { margin: 10px 0 5px; font-size: 1.1rem; color: #8b0000; }
+.gallery-item p { margin: 0; font-size: 0.9rem; opacity: 0.85; color: #8b0000; }
+
+/* =============================== Last row centering - gallery-row spans full grid (1 / -1) - use flexbox inside to center the three items =============================== */
+.gallery-row { grid-column: 1 / -1; /* span the entire grid width */ display: flex; justify-content: center; gap: 25px; align-items: stretch; }
+
+/* make each item inside the gallery-row behave like the other grid items visually */
+.gallery-row .gallery-item { /* give them equal width to match the column sizing roughly: calc((available width - gaps) / 3). Using a max-width keeps them tidy. */ flex: 1 1 0; max-width: calc((1100px - 2 * 25px) / 3); /* matches gallery max-width and gap */ }
+
+/* Ensure images inside the flex row still fill their item */
+.gallery-row .gallery-item img { height: 180px; width: 100%; object-fit: cover; }
+
+/* Footer */
+.site-footer { text-align: center; margin-top: 20px; padding: 20px; color: #8b0000; border-top: 2px solid #ffd0d0; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); max-width: 720px; }
+  .gallery-row .gallery-item { max-width: none; }
+}
+@media (max-width: 520px) {
+  .gallery { grid-template-columns: 1fr; gap: 18px; }
+  .gallery-row { flex-direction: column; }
+  .gallery-row .gallery-item { width: 100%; }
+}
+
+/* Force 3-column gallery without affecting other pages */
+.gallery-3col { display: grid; grid-template-columns: repeat(3, 1fr) !important; gap: 25px; margin: 40px auto; max-width: 900px; }
+
+/* Small icons next to resume title */
+.resume-title-wrap { display: inline-flex; align-items: center; gap: 12px; justify-content: center; }
+.resume-title-wrap .resume-icon { width: 96px; height: 96px; object-fit: contain; }
+
+.resume-heading-wrapper { display: flex; justify-content: center; align-items: center; gap: 40px; /* space between images and text */ width: 100%; text-align: center; }
+.resume-heading-wrapper .resume-heading { margin: 0; text-align: center; flex-shrink: 0; /* prevents text from being squeezed */ }
+.resume-side-img { width: 96px; height: auto; }
+
+/* Center everything inside the hero overlay */
+.hero-content { display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; }
+
+/* Stack the name + subtitle vertically */
+.hero-heading-wrapper { display: flex; flex-direction: column; align-items: center; }
+
+/* Row with icons and name */
+.hero-heading-row { display: flex; align-items: center; justify-content: center; gap: 20px; }
+
+/* Make the side images exactly 192px */
+.hero-side-img { width: 192px !important; height: auto !important; }
+
+/* Keep the name large regardless of image size */
+.hero-name { font-size: 3rem !important; /* increase or decrease if you want */ line-height: 1; margin: 0; white-space: nowrap; }
+
+/* Subtitle sits tight under "Henry Kredatus" no matter the images */
+.hero-subtitle { font-weight: 700; font-size: 1.1rem; margin: 2px 0; }
+.hero-subtitles-wrapper { position: relative; top: -80px; /* adjust freely — WILL NOT move the title or images */ text-align: center; }
+
+.about-section { width: 80%; margin: 0 auto; }
+.about-row { display: flex; align-items: center; justify-content: center; margin: 40px 0; gap: 30px; }
+.about-text { text-align: center; font-size: 1.3rem; line-height: 1.6; max-width: 700px; margin: 0 auto; }
+.about-img { width: 220px; height: auto; border-radius: 10px; }
+.about-img.left { order: 0; }
+.about-img.right { order: 2; }
+
+/* small polish: images look crisp and consistent */
+img { image-rendering: auto; -webkit-backface-visibility: hidden; }
+
+/* ================================
+   END OF ORIGINAL STYLES
+================================ */
+
+
+/* ================================
+   COLOR + DEPTH ENHANCEMENTS (non-structural)
+   - Only overrides and visual accents
+   - No layout, sizing, ordering changes
+================================ */
+
+/* NAVBAR: richer red background and subtle inner glow (does not change layout) */
+.navbar {
+  background-color: rgba(168, 0, 0, 0.06); /* very subtle tint to keep original layout */
+  /* keep existing display/flex rules from original */
+}
+
+/* Nav link hover: stronger but layout-safe */
+.nav-link {
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+.nav-link:hover {
+  background: linear-gradient(180deg, rgba(255,230,230,0.9), rgba(255,240,240,0.6));
+  color: #6f0000;
+  transform: translateY(-1px);
+}
+
+/* Section titles: slightly richer hue and light text-shadow for separation */
+.section-title {
+  color: #a20000; /* slightly deeper red */
+  text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* Cards: subtle uplift, inner highlight, and softer border */
+.card {
+  box-shadow: 0 8px 18px rgba(139,0,0,0.03);
+  border: 1px solid rgba(168,0,0,0.07);
+}
+.card img { /* ensure visual treatment only */
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Card body: clearer contrast and stronger font weight */
+.card-body {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  font-weight: 800;
+  color: #7a0000;
+}
+
+/* Gallery items: gentle panel feel (only color/depth) */
+.gallery-item {
+  background: rgba(255,255,255,0.98); /* keep white but slightly off-white to read on white backgrounds */
+  border: 1px solid rgba(168,0,0,0.04);
+  padding: 12px;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.gallery-item:hover {
+  box-shadow: 0 10px 30px rgba(11,6,6,0.06);
+  transform: translateY(-4px);
+}
+
+/* Gallery titles/descriptions: keep same color family but increase readability */
+.gallery-item h3 { color: #7a0000; font-weight: 800; }
+.gallery-item p { color: #6b0b0b; }
+
+/* About section boxes: subtle left accent bar (non-layout) */
+.about-section { position: relative; }
+.about-section::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 450px + 8px); /* aligns with original max 900px / centered container */
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, rgba(168,0,0,0.9), rgba(255,120,120,0.4));
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* Footer: richer color and slightly raised feel (no layout change) */
+.site-footer {
+  background: linear-gradient(180deg, rgba(255,255,255,0.00), rgba(255,255,255,0.02));
+  border-top: 3px solid rgba(168,0,0,0.12);
+  color: #7a0000;
+  font-weight: 700;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+/* Resume frame: keep same size but add a subtle outer border/shadow (visual only) */
+.resume-frame {
+  box-shadow: 0 12px 28px rgba(11,6,6,0.06);
+  border-radius: 4px;
+}
+
+/* Hero overlay tone: keep the same overlay but slightly warmer */
+.hero::before {
+  background: rgba(139, 0, 0, 0.30); /* slightly less dark than original 0.35 */
+}
+
+/* Hero name and subtitles: stronger contrast for readability */
+.hero-name { color: #fff; text-shadow: 0 6px 22px rgba(0,0,0,0.55); }
+.hero-subtitle { color: rgba(255,255,255,0.95); }
+
+/* Small link color adjustment site-wide: slightly warmer */
+a { color: #b02626; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: #8b0000; }
+
+/* Images: keep original sizes & layout but add non-intrusive visual frame/shadow */
+img {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 6px;
+}
+
+/* Accessibility: slightly increase contrast for main text blocks (no layout change) */
+.about-text, .card-body, .gallery-item p, .site-footer {
+  text-rendering: optimizeLegibility;
+}
+
+/* Responsive color adjustments (no layout changes) */
+@media (max-width: 900px) {
+  .section-title { font-size: 1.3rem; }
+  .about-section::before { left: 8px; } /* keeps accent visible on narrow view */
+}
+
+@media (max-width: 520px) {
+  /* keep nav-links styling but do not show any new behavior — layout rules from original remain */
+  .nav-link { padding: 6px 8px; font-size: 1rem; }
+  .header-banner { width: 86%; margin-left: auto; margin-right: auto; }
+}
+
+/* End of file */
